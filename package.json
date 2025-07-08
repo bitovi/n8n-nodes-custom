@@ -21,8 +21,7 @@
     "format": "prettier nodes --write",
     "lint": "eslint nodes",
     "lintfix": "eslint nodes --fix",
-    "test": "pnpm -r run test",
-    "postinstall": "node scripts/install-subnodes.js"
+    "test": "pnpm -r run test"
   },
   "dependencies": {
     "fs-extra": "^11.3.0"

@@ -11,11 +11,11 @@ async function installSubnodes() {
     const nodePath = path.join(nodesDir, node);
     const stat = await fs.stat(nodePath);
     if (stat.isDirectory() && await fs.pathExists(path.join(nodePath, 'package.json'))) {
-      console.log(`Installing dependencies for ${node}...`);
-      execSync('pnpm install', { cwd: nodePath, stdio: 'inherit' });
+      console.log(`Dependencies for ${node} should be installed by pnpm workspaces.`);
+      // Removed: execSync('pnpm install', { cwd: nodePath, stdio: 'inherit' });
     }
   }
-  console.log('All subnode dependencies installed.');
+  console.log('All subnode dependencies should be installed by pnpm workspaces.');
 }
 
 installSubnodes(); 
