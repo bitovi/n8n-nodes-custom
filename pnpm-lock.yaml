@@ -11,6 +11,9 @@ importers:
       fs-extra:
         specifier: ^11.3.0
         version: 11.3.0
+      n8n-workflow:
+        specifier: '*'
+        version: 1.82.0
     devDependencies:
       '@types/fs-extra':
         specifier: ^11.0.4
@@ -50,6 +53,10 @@ importers:
         version: 5.5.3
 
   nodes/GoogleSearch:
+    dependencies:
+      n8n-workflow:
+        specifier: '*'
+        version: 1.82.0
     devDependencies:
       '@typescript-eslint/parser':
         specifier: ^7.15.0
@@ -63,9 +70,6 @@ importers:
       gulp:
         specifier: ^4.0.2
         version: 4.0.2
-      n8n-workflow:
-        specifier: '*'
-        version: 1.82.0
       prettier:
         specifier: ^3.3.2
         version: 3.3.2
