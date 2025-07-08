@@ -1,0 +1,24 @@
+name: Test Custom Nodes
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [Markitdown, GoogleSearch]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9.1.4
+      - run: pnpm install
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: pip install 'markitdown[docx]'
+      - run: pnpm --filter ./nodes/${{ matrix.node }}... test
