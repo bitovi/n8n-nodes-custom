@@ -1,9 +1,6 @@
 {
   "name": "n8n-custom-nodes",
   "private": true,
-  "workspaces": [
-    "nodes/*"
-  ],
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/jest": "^29.5.14",
