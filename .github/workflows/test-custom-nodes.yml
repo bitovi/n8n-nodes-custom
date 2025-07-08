@@ -17,4 +17,8 @@ jobs:
         with:
           version: 9.1.4
       - run: pnpm install
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: pip install markitdown
       - run: pnpm --filter ./nodes/${{ matrix.node }}... test
