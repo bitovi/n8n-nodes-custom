@@ -16,8 +16,8 @@ export class NodeTemplate implements INodeType {
     defaults: {
       name: 'Node Template',
     },
-    inputs: ['main'],
-    outputs: ['main'],
+    inputs: ['main' as any],
+    outputs: ['main' as any],
     properties: [
       {
         displayName: 'Example Property',

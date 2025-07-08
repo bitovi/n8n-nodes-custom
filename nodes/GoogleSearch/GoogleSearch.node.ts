@@ -18,8 +18,8 @@ export class GoogleSearch implements INodeType {
 		defaults: {
 			name: 'Google Search',
 		},
-		inputs: ['main'],
-		outputs: ['main'],
+		inputs: ['main' as any],
+		outputs: ['main' as any],
 		credentials: [
 			{
 				name: 'googleSearchCredentialsApi',
