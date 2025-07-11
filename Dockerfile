@@ -8,7 +8,7 @@ USER root
 
 # === Install pnpm ===
 # The base n8n image does not include pnpm, so we install it globally using npm.
-# RUN npm install -g pnpm
+RUN npm install -g pnpm
 
 # === Python Dependencies for Alpine ===
 # This uses Alpine's 'apk' package manager.
