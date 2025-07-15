@@ -19,13 +19,13 @@
 		"declaration": true,
 		"sourceMap": true,
 		"skipLibCheck": true,
-		"outDir": "./dist/",
+		"outDir": "./dist/"
 	},
 	"include": [
 		"credentials/**/*",
 		"nodes/**/*",
 		"nodes/**/*.json",
-		"package.json",
+		"package.json"
 	],
 	"exclude": [
 		"nodes/Markitdown/test/*.test.js"
