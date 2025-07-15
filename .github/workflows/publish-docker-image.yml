@@ -32,7 +32,7 @@ jobs:
       - name: Check for newer n8n base image
         id: check
         env:
-          MY_IMAGE: bitovi/n8n-nodes-bitovi-custom
+          MY_IMAGE: bitovi/n8n-nodes-custom
         run: |
           latest_official_n8n=$(npm view n8n version)
 
@@ -124,7 +124,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: bitovi/n8n-nodes-bitovi-custom
+          images: bitovi/n8n-nodes-custom
           tags: |
             type=raw,value=latest,enable={{is_default_branch}}
             type=raw,value=${{ needs.check-version.outputs.n8n_version }}
