@@ -50,6 +50,13 @@
     "prettier": "^3.3.2",
     "typescript": "^5.5.3"
   },
+  "dependencies": {
+    "ajv": "^8.0.0",
+    "lodash": "^4.17.21",
+    "langfuse": "^2.19.0",
+    "@langchain/community": "^0.0.45",
+    "@langchain/core": "^0.1.41"
+  },
   "peerDependencies": {
     "n8n-workflow": "*"
   }

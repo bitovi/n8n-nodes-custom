@@ -15,7 +15,12 @@
   "dependencies": {
     "fs-extra": "^11.3.0",
     "tmp-promise": "^3.0.3",
-    "child_process": "^1.0.2"
+    "child_process": "^1.0.2",
+    "ajv": "^8.0.0",
+    "lodash": "^4.17.21",
+    "langfuse": "^2.19.0",
+    "@langchain/community": "^0.0.45",
+    "@langchain/core": "^0.1.41"
   },
   "peerDependencies": {
     "n8n-workflow": "*"
