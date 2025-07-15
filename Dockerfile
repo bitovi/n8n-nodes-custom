@@ -29,6 +29,9 @@ COPY package.json pnpm-lock.yaml ./
 # Install production Node.js dependencies.
 RUN pnpm install --prod
 
+# Build custom nodes (compile TypeScript to JavaScript if needed)
+RUN pnpm run build || true
+
 # Copy the built application code
 COPY dist/ .
 
@@ -41,3 +44,6 @@ USER node
 
 # Set the main working directory back to n8n's default
 WORKDIR /home/node
+
+# Set the environment variable so n8n loads custom nodes from the correct directory
+ENV N8N_CUSTOM_EXTENSIONS=/home/node/.n8n/custom/nodes
